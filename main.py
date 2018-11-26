@@ -93,60 +93,14 @@ def hello():
         f.write(str(count))
         f.close()
 
-    return f"""
-        <!doctype html>
-<html lang="pt-BR">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-
-    <title>Grupo vip P. Palazzo</title>
-</head>
-
-<body>
-    <div class="py-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="https://ericarodrigues.netlify.com/Logo-Fundo-Vazado-1-1024x738.png"></div>
-            </div>
-        </div>
-    </div>
-        <div class="pt-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="lead text-center">Clique no botão abaixo <br> para acessar o grupo</p>
-                    <p class="text-center">⬇</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12"><a class="btn btn-block btn-success" href="{link}">
+    return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"><title>Grupo vip P. Palazzo</title></head><body><div class="py-1"><div class="container"><div class="row"><div class="col-md-12"><img class="img-fluid d-block mx-auto" src="https://ericarodrigues.netlify.com/Logo-Fundo-Vazado-1-1024x738.png"></div></div></div></div><div class="pt-2"><div class="container"><div class="row"><div class="col-md-12"><p class="lead text-center">Clique no botão abaixo <br> para acessar o grupo</p><p class="text-center">⬇</p></div></div></div></div><div class="py-5"><div class="container"><div class="row"><div class="col-md-12"><a class="btn btn-block btn-success" href="{link}">
                 {nome}
-                </a></div>
-            </div>
-        </div>
-    </div>
+                </a></div></div></div></div><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script></body>"""
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
-    """
 
 @app.route("/acessos")
 def acessos():
@@ -155,6 +109,7 @@ def acessos():
         acesso = int(f.readline())
         f.close()
     return f"Acessos {acesso}"
+
 
 if __name__ == '__main__':
     app.run()
