@@ -108,7 +108,7 @@ def acessos():
     with open('count.txt') as f:
         acesso = int(f.readline())
         f.close()
-    return f"Acessos {acesso}"
+    return "Acessos {}".format(acesso)
 
 
 if __name__ == '__main__':
