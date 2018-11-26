@@ -112,4 +112,4 @@ def acessos():
 
 
 if __name__ == '__main__':
-    app.run(port="443")
+    app.run()
