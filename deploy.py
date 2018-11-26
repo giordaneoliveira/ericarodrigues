@@ -110,6 +110,3 @@ def acessos():
         f.close()
     return "Acessos {}".format(acesso)
 
-
-if __name__ == '__main__':
-    app.run()
