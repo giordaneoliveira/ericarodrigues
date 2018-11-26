@@ -1,1 +1,1 @@
-"web: python main.py" > Procfile
+web: python main.py
