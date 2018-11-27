@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello():
+def index():
 
     db = [
         {
@@ -110,3 +110,4 @@ def acessos():
         f.close()
     return "Acessos {}".format(acesso)
 
+# app.run(ssl_context='adhoc', port="80")
